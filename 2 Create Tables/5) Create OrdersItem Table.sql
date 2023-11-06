@@ -1,9 +1,13 @@
-CREATE TABLE `order_Items` (
-    `order_item_ID` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    `order_ID` bigint(20) UNSIGNED NOT NULL,
-    `product_ID` bigint(20) UNSIGNED NOT NULL,
+CREATE TABLE `order_items` (
+    `order_item_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    `order_id` bigint(20) UNSIGNED NOT NULL,
+    `product_id` bigint(20) UNSIGNED NOT NULL,
     `quantity` INT,
-    `unit_price` DECIMAL(10, 2),
-    FOREIGN KEY (`order_ID`) REFERENCES `orders`(`order_ID`),
-    FOREIGN KEY (`product_ID`) REFERENCES `products`(`product_ID`)
+    `unit_price` INT,
+    FOREIGN KEY (`order_id`) REFERENCES `orders`(`order_id`),
+    FOREIGN KEY (`product_id`) REFERENCES `products`(`product_id`)
 )
+
+
+
+

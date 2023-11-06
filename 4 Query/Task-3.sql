@@ -7,11 +7,11 @@ SELECT
 FROM
     categories c
 JOIN
-    products p ON c.category_ID = p.category_ID
+    products p ON c.category_id = p.category_id
 JOIN
-    order_items oi ON p.product_ID = oi.product_ID
+    order_items oi ON p.product_id = oi.product_id
 GROUP BY
-    c.category_ID, c.name
+    c.category_id, c.name
 ORDER BY
     total_revenue DESC;
 

@@ -3,21 +3,21 @@ TASK - 1
 */
 
 SELECT
-    c.customer_ID,
+    c.customer_id,
     c.name,
     c.email,
     c.location,
-    COUNT(o.order_id) AS total_orders
+    COUNT(o.order_id) AS number_of_orders
 FROM
-    Customers c
+    customers c
 LEFT JOIN
-    Orders o
+    orders o
 ON
-    c.customer_ID = o.customer_ID
+    c.customer_id = o.customer_id
 GROUP BY
     c.customer_ID, c.name, c.email, c.location
 ORDER BY
-total_orders DESC;
+number_of_orders DESC;
 
 
 
